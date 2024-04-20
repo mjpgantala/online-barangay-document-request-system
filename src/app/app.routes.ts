@@ -8,6 +8,11 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { RegistrationComponent } from './components/registration/registration.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { RequestDocumentComponent } from './components/request-document/request-document.component';
+import { RequestLogsComponent } from './components/request-logs/request-logs.component';
+import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
+import { ViewMessagesComponent } from './admin/view-messages/view-messages.component';
 
 
 //Define Routes
@@ -18,6 +23,11 @@ export const routes: Routes = [
     {path:'registration', component: RegistrationComponent},
     {path:'login', component: LoginComponent},
     {path:'forgot-password', component: ForgotPasswordComponent},
+    {path:'dashboard', component: DashboardComponent},
+    {path:'request-document', component: RequestDocumentComponent},
+    {path:'request-logs', component: RequestLogsComponent},
+    {path:'admin-dashboard', component: AdminDashboardComponent},
+    {path:'view-messages', component: ViewMessagesComponent},
     {path:'**', component: NotFoundComponent}
 ]
 

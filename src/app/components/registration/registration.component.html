@@ -1,113 +1,57 @@
 <div class="container">
-                                            
-    <br>
-<h2><b>Registration Form</b></h2>
-<hr>
 
-<form action="" method="POST" autocomplete="off">
-<div class="row">
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>First Name <b style="color: red">*</b></label>
-<input class="form-control" value="" placeholder="Enter first name here.." name="inp_fname" required="">
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Last Name <b style="color: red">*</b></label>
-<input class="form-control" value="" placeholder="Enter last name here.." name="inp_lname" required="">
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Middle Name </label>
-<input class="form-control" value="" placeholder="Enter Middle name here.." name="inp_mname">
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Surfix/Prefix Name </label>
-<input class="form-control" value="" placeholder="Enter Surfix/Prefix name here.. (Jr. Sr. III. II. IV)" name="inp_pname">
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Gender <b style="color: red">*</b></label>
-<select class="form-control" name="inp_gender" required="">
-    <option selected="" disabled="" value="">-- SELECT --</option>
-    <option>Male</option>
-    <option>Female</option>
-</select>
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Civil Status <b style="color: red">*</b></label>
-<select class="form-control" name="inp_civil" required="">
-    <option selected="" disabled="" value="">-- SELECT --</option>
-    <option>Single</option>
-    <option>Married</option>
-    <option>Separated</option>
-    <option>Widow/Widower</option>
-</select>
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Birth Date <b style="color: red">*</b></label>
-<input type="date" class="form-control" value="" name="inp_birth" required="">
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Email Address </label>
-<input class="form-control" value="" placeholder="Enter Email Address here.." name="inp_email">
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Mobile Number <b style="color: red">*</b></label>
-<input type="number" class="form-control" value="" placeholder="Enter Phone Number here.." name="inp_phone" required="">
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Tel. Number </label>
-<input type="number" class="form-control" value="" placeholder="Enter Tel. Number here.." name="inp_telphone">
-</div>
-</div>
-<div class="col-md-12 pd-inp">
-<div class="form-group">
-<label>Complete Address <b style="color: red">*</b></label>
-<input type="text" class="form-control" value="" placeholder="Enter Complete Address here.." name="inp_address" required="">
-</div>
-</div>
-<hr>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Username <b style="color: red">*</b></label>
-<input type="text" class="form-control" placeholder="Enter Username here.." name="inp_username" required="">
-</div>
-</div>
-<div class="col-md-6 pd-inp">
-<div class="form-group">
-<label>Password <b style="color: red">*</b></label>
-<input type="password" class="form-control" placeholder="Enter Password here.." name="inp_password" required="">
-</div>
-</div>
-<hr>
-<div class="col-md-12 pd-inp">
-<div class="form-group">
-<input type="checkbox" id="term" onclick="terms()">
-<label for="term" onclick="terms()" style="font-style: italic; cursor: pointer;">I Agree
-    to the Barangay Data Privacy Consent and Service Agreement.</label>
-<hr>
+    <div class="card o-hidden border-0 shadow-lg my-5">
+        <div class="card-body p-0">
+            <!-- Nested Row within Card Body -->
+            <div class="row">
+                <div class="col-lg-5 d-none d-lg-block">
+                    <img src="../../../assets/registration.png" alt="" width="350" height="350" class="img-responsive mx-5 mt-5">
+                </div>
+                <div class="col-lg-7">
+                    <div class="p-5">
+                        <div class="text-center">
+                            <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                        </div>
+                        <form class="user">
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="text" class="form-control form-control-user" id="exampleFirstName"
+                                        placeholder="First Name">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="text" class="form-control form-control-user" id="exampleLastName"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control form-control-user" id="exampleInputEmail"
+                                    placeholder="Email Address">
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input type="password" class="form-control form-control-user"
+                                        id="exampleInputPassword" placeholder="Password">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control form-control-user"
+                                        id="exampleRepeatPassword" placeholder="Repeat Password">
+                                </div>
+                            </div>
+                            <a href="/login" class="btn btn-primary btn-user btn-block">
+                                Register Account
+                            </a>
+                        </form>
+                        <hr>
+                        <div class="text-center">
+                            <a class="small" href="/forgot-password">Forgot Password?</a>
+                        </div>
+                        <div class="text-center">
+                            <a class="small" href="/login">Already have an account? Login!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <button type="reset" class="text-light btn btn-lg btn-block btn-danger"><span class="fa fa-recycle"></span> Reset</button>
-    <button type="submit" id="btn_register" disabled="" name="btn_register" class="text-light btn btn-lg btn-block btn-info krc-02"><span class="fa fa-pencil"></span> Register Now!</button>
-
-</div>
-</div>
-</div>
-</form>
 </div>

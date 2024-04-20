@@ -1,23 +1,27 @@
 import { Component } from '@angular/core';
-import Swal from 'sweetalert2'
+
+import { AuthService } from '../../auth.service';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [],
+  imports: [FormsModule,],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
 
-loginAlert(){
-  Swal.fire({
-    title: 'Invalid Username/Password!',
-    text: 'Please Try Again!',
-    icon: 'error',
-    confirmButtonText: 'Ok'
-  })
-}
+  username: string = ''; // Define username property
+  password: string = ''; // Define password property
+
+  constructor(private authService: AuthService) {}
+
+  login() {
+    const username = this.username;
+    const password = this.password;
+    this.authService.login(username, password);
+  }
 
   
 }

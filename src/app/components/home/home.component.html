@@ -1,68 +1,75 @@
-        <!-- Responsive navbar-->
-        <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="/"> <img src="assets/brgyhall.png" alt="brgy" width="30px" height="30px"> Online Barangay Document Request System</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/login">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/login">Login</a></li>
-                    </ul>
-                </div>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container">
+      <a class="navbar-brand" href="">
+            <i class="fas fa-fw fa-building"></i> OBDRS
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto mx-0">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about-us">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!-- Page Content -->
+  <div class="container" ng-controller="HomeController">
+    <div class="jumbotron mt-5">
+      <h1 class="display-4">Welcome to the Online Barangay Document Request System</h1>
+      <p class="lead">Submit your requests for barangay documents online with ease.</p>
+      <hr class="my-4">
+      <p>Click below to get started:</p>
+      <a class="btn btn-primary btn-lg" href="/login" role="button">Request Documents</a>
+    </div>
+  
+    <!-- Contact Us Section -->
+    <section id="contact">
+      <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+          <h2>Contact Us</h2>
+          <p>Have any questions or feedback? Feel free to get in touch with us using the form below:</p>
+          <form>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
             </div>
-        </nav>
-        <!-- Page header with logo and tagline-->
-        <header class="py-5 bg-light border-bottom mb-4">
-            <div class="container">
-                <div class="text-center my-5">
-                    <h1 class="fw-bolder">Welcome to Barangay Poblacion!</h1>
-                    <p class="lead mb-0">---------------------------------------------------</p>
-                </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
             </div>
-        </header>
-        <!-- Page content-->
-       
-        <div class="container">
-            <form method="">
-                <div class="row">
-                    
-                    <p>Content Here---Content Here---Content Here---Content Here</p>
-                    <p>Content Here---Content Here---Content Here---Content Here</p>
-                    <p>Content Here---Content Here---Content Here---Content Here</p>
-                    <p>Content Here---Content Here---Content Here---Content Here</p>
-                    <p>Content Here---Content Here---Content Here---Content Here</p>
-                    
-                    <div class="col-md-6">
-                        <h1>Contact Us</h1>
-                        <div class="form-group">
-                            <textarea name="txtMsg" rows="9" class="form-control" placeholder="Your Message *"></textarea>
-                        </div>
-                    </div>
-                    <div class="col-md-6 mt-5">
-                        
-                        <div class="form-group">
-                            <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value=""><br>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="txtEmail" class="form-control" placeholder="Your Email *" value=""><br>
-                        </div>
-                        <div class="form-group">
-                            <input type="number" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value=""><br>
-                        </div>
-                    
-                        <div class="form-group">
-                                                        <button type="button" (click)="loginAlert()" name="btnSubmit" class="btn btn-block btn-primary" value="Send Message" style="width: 100%;">
-                                Send Message
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </form>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea class="form-control" id="message" rows="5" placeholder="Enter your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
         </div>
-       
-       <!-- Footer-->
-        <footer class="py-4 bg-dark mt-5">
-            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; OBDRS 2024</p></div>
-        </footer>
+      </div>
+    </section>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="footer bg-dark text-light text-center py-3 mt-5">
+    <div class="container">
+      <span>&copy; 2024 Online Barangay Document Request System</span>
+    </div>
+  </footer>
+  
