@@ -13,10 +13,10 @@ import { RequestDocumentComponent } from './components/request-document/request-
 import { RequestLogsComponent } from './components/request-logs/request-logs.component';
 import { AdminDashboardComponent } from './admin/admin-dashboard/admin-dashboard.component';
 import { ViewMessagesComponent } from './admin/view-messages/view-messages.component';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
 
 
 //Define Routes
-//export const routes: Routes = [];
 export const routes: Routes = [
     {path:'', component: HomeComponent},
     {path:'about-us', component: AboutUsComponent},
@@ -28,6 +28,7 @@ export const routes: Routes = [
     {path:'request-logs', component: RequestLogsComponent},
     {path:'admin-dashboard', component: AdminDashboardComponent},
     {path:'view-messages', component: ViewMessagesComponent},
+    {path:'main-header', component: MainHeaderComponent},
     {path:'**', component: NotFoundComponent}
 ]
 
